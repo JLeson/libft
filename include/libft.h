@@ -6,7 +6,7 @@
 /*   By: fsarkoh <fsarkoh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 12:19:32 by fsarkoh           #+#    #+#             */
-/*   Updated: 2023/01/12 17:18:59 by fsarkoh          ###   ########.fr       */
+/*   Updated: 2023/01/13 19:20:44 by fsarkoh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,4 +82,6 @@ int		ft_isupper(int c);
 int		ft_islower(int c);
 int		ft_printf(const char *format, ...);
 int		ft_strnchr(char *str, char c);
+int		ft_min(int a, int b);
+int		ft_max(int a, int b);
 #endif

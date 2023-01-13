@@ -66,6 +66,8 @@ SRCFILES	=		ft_isalnum.c		\
 					ft_putptr_fd.c		\
 					ft_printf.c			\
 					ft_strnchr.c		\
+					ft_min.c			\
+					ft_max.c			\
 
 OBJFILES	=		$(SRCFILES:.c=.o)
 
