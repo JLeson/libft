@@ -6,7 +6,7 @@
 /*   By: fsarkoh <fsarkoh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 19:04:44 by fsarkoh           #+#    #+#             */
-/*   Updated: 2023/01/17 15:14:10 by fsarkoh          ###   ########.fr       */
+/*   Updated: 2023/01/23 16:44:52 by fsarkoh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,10 @@ char	*rm_line_from_buff(char *buff)
 	unsigned int	buff_offset;
 
 	buff_offset = 0;
-	offset = ft_strlen(buff, '\n');
+	offset = gnl_strlen(buff, '\n');
 	if (*(buff + offset) == '\n')
 		offset++;
-	new_buff = malloc(ft_strlen(buff, '\0') - ft_strlen(buff, '\n') + 1);
+	new_buff = malloc(gnl_strlen(buff, '\0') - gnl_strlen(buff, '\n') + 1);
 	if (!new_buff)
 		return (NULL);
 	while (*(buff + offset))
@@ -73,7 +73,7 @@ char	*get_line_from_buff(char *buff)
 	unsigned int	offset;
 
 	offset = 0;
-	line = malloc(ft_strlen(buff, '\n') + 2 - !ft_strchr(buff, '\n'));
+	line = malloc(gnl_strlen(buff, '\n') + 2 - !gnl_strchr(buff, '\n'));
 	if (!line)
 		return (NULL);
 	while (*(buff + offset) && *(buff + offset) != '\n')
@@ -96,15 +96,15 @@ char	*get_line_buff(int fd, char *buff)
 	char	*tmp_line_buff;
 	char	*next_buff;
 
-	line_buff = ft_strjoin(buff, "");
+	line_buff = gnl_strjoin(buff, "");
 	if (!line_buff)
 		return (NULL);
-	while (!ft_strchr(line_buff, '\n'))
+	while (!gnl_strchr(line_buff, '\n'))
 	{
 		next_buff = get_next_buff(fd);
 		if (!next_buff)
 			return (free_and_return(&line_buff, NULL));
-		tmp_line_buff = ft_strjoin(line_buff, next_buff);
+		tmp_line_buff = gnl_strjoin(line_buff, next_buff);
 		free(line_buff);
 		if (!tmp_line_buff)
 			return (free_and_return(&next_buff, NULL));

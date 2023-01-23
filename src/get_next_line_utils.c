@@ -6,7 +6,7 @@
 /*   By: fsarkoh <fsarkoh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 19:02:34 by fsarkoh           #+#    #+#             */
-/*   Updated: 2023/01/17 15:14:19 by fsarkoh          ###   ########.fr       */
+/*   Updated: 2023/01/23 16:45:03 by fsarkoh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*malloc_buff(void)
 	return (buff);
 }
 
-char	*ft_strjoin(const char *line_buff, const char *next_buff)
+char	*gnl_strjoin(const char *line_buff, const char *next_buff)
 {
 	unsigned int	offset;
 	unsigned int	sub_offset;
@@ -32,7 +32,7 @@ char	*ft_strjoin(const char *line_buff, const char *next_buff)
 
 	offset = 0;
 	sub_offset = 0;
-	str = malloc(ft_strlen(line_buff, '\0') + ft_strlen(next_buff, '\0') + 1);
+	str = malloc(gnl_strlen(line_buff, '\0') + gnl_strlen(next_buff, '\0') + 1);
 	if (!str)
 		return (NULL);
 	while (*(line_buff + offset))
@@ -50,7 +50,7 @@ char	*ft_strjoin(const char *line_buff, const char *next_buff)
 	return (str);
 }
 
-size_t	ft_strlen(const char *s, int term)
+size_t	gnl_strlen(const char *s, int term)
 {
 	unsigned int	offset;
 
@@ -60,13 +60,13 @@ size_t	ft_strlen(const char *s, int term)
 	return (offset);
 }
 
-char	*ft_strchr(const char *s, int c)
+char	*gnl_strchr(const char *s, int c)
 {
 	unsigned int	offset;
 
 	offset = 0;
 	if (!(char)c)
-		return ((char *)s + ft_strlen(s, '\0'));
+		return ((char *)s + gnl_strlen(s, '\0'));
 	while (*(s + offset))
 	{
 		if (*(s + offset) == (char)c)
