@@ -83,7 +83,7 @@ all:			$(NAME)
 $(NAME):		$(BINS)
 					@mkdir -p $(LIBDIR)
 					@mkdir -p $(INCLUDEDIR)
-					@cp $(HEADERS) $(INCLUDEDIR)
+					@cp $(LIBFTHEADERDIR)libft.h $(INCLUDEDIR)
 					ar rcs $(LIBDIR)$(NAME) $(BINS)
 
 $(BINDIR)%.o:	$(SRCDIR)%.c $(LIBFTHEADERDIR)$(HEADERFILE)
