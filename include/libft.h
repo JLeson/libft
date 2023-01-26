@@ -6,7 +6,7 @@
 /*   By: fsarkoh <fsarkoh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 12:19:32 by fsarkoh           #+#    #+#             */
-/*   Updated: 2023/01/17 15:17:28 by fsarkoh          ###   ########.fr       */
+/*   Updated: 2023/01/26 20:17:49 by fsarkoh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_list
 }					t_list;
 
 // FT_FUNCTIONS
+
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
@@ -62,6 +63,7 @@ int		ft_puthex_fd(int n, int fd, int toupper);
 int		ft_putptr_fd(void *ptr, int fd);
 
 // LINKED LIST FUNCTIONS
+
 t_list	*ft_lstnew(void *content);
 int		ft_lstsize(t_list *lst);
 void	ft_lstadd_front(t_list **list, t_list *new);
@@ -74,6 +76,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),
 			void (*del)(void *));
 
 // OWN FUNCTIONS
+
 int		ft_isspace(int c);
 int		ft_abs(int n);
 void	ft_strrev(char	*str);
@@ -84,5 +87,7 @@ int		ft_printf(const char *format, ...);
 int		ft_strnchr(char *str, char c);
 int		ft_min(int a, int b);
 int		ft_max(int a, int b);
+int		ft_ishdigit(int c);
+int		ft_htoi(const char *str);
 char	*get_next_line(int fd);
 #endif
