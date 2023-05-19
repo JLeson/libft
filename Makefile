@@ -84,7 +84,7 @@ $(NAME):		$(BINPATHS)
 					@mkdir -p $(OUTDIR)
 					@mkdir -p $(OUTHEADERDIR)
 					@cp $(HEADERPATHS) $(OUTHEADERDIR)
-					ar rcs $(OUTDIR)$(NAME) $(BINS)
+					ar rcs $(OUTDIR)$(NAME) $(BINPATHS)
 
 $(BINDIR)%.o:	$(SRCDIR)%.c
 					@mkdir -p $(BINDIR)
