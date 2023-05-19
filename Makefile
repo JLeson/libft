@@ -1,15 +1,14 @@
-# THIS MAKEFILE COMPILES THE LIBFT LIBRARY
-
 NAME			=	libft.a
 CC				=	gcc
 CFLAGS			=	-Wall -Werror -Wextra
 RM				=	rm -f
 
+OUTDIR			=	../lib/
+OUTHEADERDIR	=	../include/	
+
 SRCDIR			=	./src/
 BINDIR			=	./bin/
-LIBDIR			=	../lib/
-INCLUDEDIR		=	../include/
-LIBFTHEADERDIR	=	./include/
+HEADERDIR		=	./include/
 
 SRCFILES		=	ft_isalnum.c			\
 					ft_isprint.c			\
@@ -72,32 +71,33 @@ SRCFILES		=	ft_isalnum.c			\
 					get_next_line.c			\
 					get_next_line_utils.c	\
 
-HEADERFILES		=	get_next_line.h			\
-					libft.h					\
+HEADERFILES		=	libft.h					\
+					get_next_line.h			\
 
-BINFILES	=		$(SRCFILES:.c=.o)
+BINFILES		=	$(SRCFILES:.c=.o)
 
-BINS		=		$(addprefix $(BINDIR), $(BINFILES))
-HEADERS		=		$(addprefix $(LIBFTHEADERDIR), $(HEADERFILES))
+SRCPATHS		=	$(addprefix $(SRCDIR), $(SRCFILES))
+BINPATHS		=	$(addprefix $(BINDIR), $(BINFILES))
+HEADERPATHS		=	$(addprefix $(HEADERDIR), $(HEADERFILES))
+
+$(NAME):		$(BINPATHS)
+					@mkdir -p $(OUTDIR)
+					@mkdir -p $(OUTHEADERDIR)
+					@cp $(HEADERPATHS) $(OUTHEADERDIR)
+					ar rcs $(OUTDIR)$(NAME) $(BINS)
+
+$(BINDIR)%.o:	$(SRCDIR)%.c
+					@mkdir -p $(BINDIR)
+					$(CC) $(CFLAGS) -I $(HEADERDIR) -c $< -o $@
 
 all:			$(NAME)
 
-$(NAME):		$(BINS)
-					@mkdir -p $(LIBDIR)
-					@mkdir -p $(INCLUDEDIR)
-					@cp $(LIBFTHEADERDIR)libft.h $(INCLUDEDIR)
-					ar rcs $(LIBDIR)$(NAME) $(BINS)
-
-$(BINDIR)%.o:	$(SRCDIR)%.c $(LIBFTHEADERDIR)$(HEADERFILE)
-					@mkdir -p $(BINDIR)
-					$(CC) $(CFLAGS) -I $(LIBFTHEADERDIR) -c $< -o $@
-
 clean:
-					$(RM) $(BINS)
+					@$(RM) $(BINPATHS)
 
 fclean:			clean
-					@$(RM) $(LIBDIR)$(NAME)
-					@$(RM) $(addprefix $(INCLUDEDIR), $(HEADERFILES))
+					@$(RM) $(OUTDIR)$(NAME)
+					@$(RM) $(addprefix $(OUTHEADERDIR), $(HEADERFILES))
 
 re:				fclean $(NAME)
 
