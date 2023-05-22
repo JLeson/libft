@@ -68,6 +68,7 @@ SRCFILES		=	ft_isalnum.c			\
 					ft_max.c				\
 					ft_ishdigit.c			\
 					ft_htoi.c				\
+					ft_strarrlen.c			\
 					get_next_line.c			\
 					get_next_line_utils.c	\
 
@@ -84,11 +85,11 @@ $(NAME):		$(BINPATHS)
 					@mkdir -p $(OUTDIR)
 					@mkdir -p $(OUTHEADERDIR)
 					@cp $(HEADERPATHS) $(OUTHEADERDIR)
-					ar rcs $(OUTDIR)$(NAME) $(BINPATHS)
+					@ar rcs $(OUTDIR)$(NAME) $(BINPATHS)
 
 $(BINDIR)%.o:	$(SRCDIR)%.c
 					@mkdir -p $(BINDIR)
-					$(CC) $(CFLAGS) -I $(HEADERDIR) -c $< -o $@
+					@$(CC) $(CFLAGS) -I $(HEADERDIR) -c $< -o $@
 
 all:			$(NAME)
 
