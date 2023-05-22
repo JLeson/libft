@@ -6,7 +6,7 @@
 /*   By: joel <joel@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 12:19:32 by fsarkoh           #+#    #+#             */
-/*   Updated: 2023/05/22 22:02:15 by joel             ###   ########.fr       */
+/*   Updated: 2023/05/22 22:32:51 by joel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,7 @@ int				ft_min(int a, int b);
 int				ft_max(int a, int b);
 int				ft_ishdigit(int c);
 int				ft_htoi(const char *str);
+int				ft_isempty(char *str);
 unsigned int	ft_strarrlen(char	**strarr);
 char			*get_next_line(int fd);
 #endif

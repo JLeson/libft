@@ -68,6 +68,7 @@ SRCFILES		=	ft_isalnum.c			\
 					ft_max.c				\
 					ft_ishdigit.c			\
 					ft_htoi.c				\
+					ft_isempty.c			\
 					ft_strarrlen.c			\
 					get_next_line.c			\
 					get_next_line_utils.c	\
