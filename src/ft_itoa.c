@@ -6,7 +6,7 @@
 /*   By: fsarkoh <fsarkoh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 14:58:00 by fsarkoh           #+#    #+#             */
-/*   Updated: 2022/10/26 17:02:40 by fsarkoh          ###   ########.fr       */
+/*   Updated: 2023/07/12 14:27:26 by fsarkoh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 static unsigned int	nchars(int n);
 
 char	*ft_itoa(int n)
-{	
+{
 	int		is_neg;
 	char	*str;
 	size_t	str_len;

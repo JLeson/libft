@@ -6,7 +6,7 @@
 /*   By: fsarkoh <fsarkoh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 19:02:34 by fsarkoh           #+#    #+#             */
-/*   Updated: 2023/01/23 16:45:03 by fsarkoh          ###   ########.fr       */
+/*   Updated: 2023/07/12 14:29:37 by fsarkoh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ char	*gnl_strchr(const char *s, int c)
 }
 
 char	*free_and_return(char **buff, char	**buff2)
-{	
+{
 	free(*buff);
 	*buff = NULL;
 	if (buff2)

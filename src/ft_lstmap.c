@@ -6,7 +6,7 @@
 /*   By: fsarkoh <fsarkoh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 17:06:04 by fsarkoh           #+#    #+#             */
-/*   Updated: 2022/10/21 18:56:23 by fsarkoh          ###   ########.fr       */
+/*   Updated: 2023/07/12 14:28:23 by fsarkoh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		return (NULL);
 	n_lst = NULL;
 	while (lst)
-	{	
+	{
 		temp = ft_lstnew((*f)(lst->content));
 		if (!temp)
 		{

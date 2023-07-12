@@ -6,7 +6,7 @@
 /*   By: fsarkoh <fsarkoh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:40:58 by fsarkoh           #+#    #+#             */
-/*   Updated: 2022/10/20 16:57:15 by fsarkoh          ###   ########.fr       */
+/*   Updated: 2023/07/12 14:27:36 by fsarkoh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "libft.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
-{	
+{
 	if (!del)
 		return ;
 	if (lst)

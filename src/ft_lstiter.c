@@ -6,7 +6,7 @@
 /*   By: fsarkoh <fsarkoh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 17:01:52 by fsarkoh           #+#    #+#             */
-/*   Updated: 2022/10/20 17:21:18 by fsarkoh          ###   ########.fr       */
+/*   Updated: 2023/07/12 14:28:16 by fsarkoh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	{
 		(*f)(lst->content);
 		lst = lst->next;
-	}	
+	}
 }

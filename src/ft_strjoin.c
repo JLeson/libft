@@ -6,7 +6,7 @@
 /*   By: fsarkoh <fsarkoh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 17:15:58 by fsarkoh           #+#    #+#             */
-/*   Updated: 2022/10/26 17:15:09 by fsarkoh          ###   ########.fr       */
+/*   Updated: 2023/07/12 14:29:15 by fsarkoh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	if (str)
 	{
 		while (*(s1 + offset))
-		{	
+		{
 			*(str + offset) = *(s1 + offset);
 			offset++;
 		}

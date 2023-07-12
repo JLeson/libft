@@ -6,7 +6,7 @@
 /*   By: fsarkoh <fsarkoh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 13:02:49 by fsarkoh           #+#    #+#             */
-/*   Updated: 2022/10/26 16:54:36 by fsarkoh          ###   ########.fr       */
+/*   Updated: 2023/07/12 14:27:18 by fsarkoh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ int	ft_atoi(const char *str)
 		to *= 10;
 		to += *(str + offset) - 48;
 		offset++;
-	}		
+	}
 	return (to * sign);
 }

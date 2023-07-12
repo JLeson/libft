@@ -6,7 +6,7 @@
 /*   By: fsarkoh <fsarkoh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 19:55:19 by fsarkoh           #+#    #+#             */
-/*   Updated: 2023/01/09 16:16:29 by fsarkoh          ###   ########.fr       */
+/*   Updated: 2023/07/12 14:28:53 by fsarkoh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_printf(const char *format, ...)
 	nch = 0;
 	va_start(args, format);
 	while (*(format + offset))
-	{	
+	{
 		if (*(format + offset) == '%' && *(format + offset + 1))
 		{
 			offset++;

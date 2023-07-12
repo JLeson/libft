@@ -6,7 +6,7 @@
 /*   By: fsarkoh <fsarkoh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 13:22:39 by fsarkoh           #+#    #+#             */
-/*   Updated: 2022/10/26 17:03:59 by fsarkoh          ###   ########.fr       */
+/*   Updated: 2023/07/12 14:28:49 by fsarkoh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	src_conv = src;
 	offset = 0;
 	if (dst || src)
-	{	
+	{
 		while (offset < n)
-		{	
+		{
 			*(dst_conv + offset) = *(src_conv + offset);
 			offset++;
 		}
