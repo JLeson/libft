@@ -99,7 +99,6 @@ clean:
 
 fclean:			clean
 					@$(RM) $(OUTDIR)$(NAME)
-					@$(RM) $(addprefix $(OUTHEADERDIR), $(HEADERFILES))
 
 re:				fclean $(NAME)
 
