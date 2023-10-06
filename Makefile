@@ -1,10 +1,8 @@
 NAME			=	libft.a
+
 CC				=	gcc
 CFLAGS			=	-Wall -Werror -Wextra
 RM				=	rm -f
-
-OUTDIR			=	../lib/
-OUTHEADERDIR	=	../include/	
 
 SRCDIR			=	./src/
 BINDIR			=	./bin/
@@ -73,19 +71,14 @@ SRCFILES		=	ft_isalnum.c			\
 					get_next_line.c			\
 					get_next_line_utils.c	\
 
-HEADERFILES		=	libft.h					\
-					get_next_line.h			\
 
 BINFILES		=	$(SRCFILES:.c=.o)
 
 SRCPATHS		=	$(addprefix $(SRCDIR), $(SRCFILES))
 BINPATHS		=	$(addprefix $(BINDIR), $(BINFILES))
-HEADERPATHS		=	$(addprefix $(HEADERDIR), $(HEADERFILES))
 
 $(NAME):		$(BINPATHS)
-					@mkdir -p $(OUTDIR)
-					@mkdir -p $(OUTHEADERDIR)
-					@ar rcs $(OUTDIR)$(NAME) $(BINPATHS)
+					@ar rcs $(NAME) $(BINPATHS)
 
 $(BINDIR)%.o:	$(SRCDIR)%.c
 					@mkdir -p $(BINDIR)
