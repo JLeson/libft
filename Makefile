@@ -82,15 +82,18 @@ $(NAME):		$(BINPATHS)
 
 $(BINDIR)%.o:	$(SRCDIR)%.c
 					@mkdir -p $(BINDIR)
-					$(CC) $(CFLAGS) -I $(HEADERDIR) -c $< -o $@
+					@echo Compiling $<
+					@$(CC) $(CFLAGS) -I $(HEADERDIR) -c $< -o $@
 
 all:			$(NAME)
 
 clean:
 					@$(RM) $(BINPATHS)
+					@echo Deleted all binaries
 
 fclean:			clean
 					@$(RM) $(NAME)
+					@echo Deleted $(NAME)
 
 re:				fclean $(NAME)
 
