@@ -85,7 +85,6 @@ HEADERPATHS		=	$(addprefix $(HEADERDIR), $(HEADERFILES))
 $(NAME):		$(BINPATHS)
 					@mkdir -p $(OUTDIR)
 					@mkdir -p $(OUTHEADERDIR)
-					@cp $(HEADERPATHS) $(OUTHEADERDIR)
 					@ar rcs $(OUTDIR)$(NAME) $(BINPATHS)
 
 $(BINDIR)%.o:	$(SRCDIR)%.c
