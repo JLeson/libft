@@ -82,7 +82,7 @@ $(NAME):		$(BINPATHS)
 
 $(BINDIR)%.o:	$(SRCDIR)%.c
 					@mkdir -p $(BINDIR)
-					@$(CC) $(CFLAGS) -I $(HEADERDIR) -c $< -o $@
+					$(CC) $(CFLAGS) -I $(HEADERDIR) -c $< -o $@
 
 all:			$(NAME)
 
@@ -90,7 +90,7 @@ clean:
 					@$(RM) $(BINPATHS)
 
 fclean:			clean
-					@$(RM) $(OUTDIR)$(NAME)
+					@$(RM) $(NAME)
 
 re:				fclean $(NAME)
 
